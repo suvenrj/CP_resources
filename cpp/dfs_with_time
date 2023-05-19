@@ -1,0 +1,12 @@
+void dfs(int v){
+    time++;
+    t_in[v] = time;
+    visited[v]=1;
+    for (int child: Adj[v]){
+        if (visited[child]==0){
+            dfs(child);
+        }
+    }
+    time++;
+    t_out[v] = time;
+}
