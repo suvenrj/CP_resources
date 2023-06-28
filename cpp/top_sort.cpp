@@ -8,7 +8,7 @@ using namespace std;
 void dfs(int x, vector<int>*Adj, int* visited, int*parent, vector<int>& answer){
     visited[x]=1;
     for (int child: Adj[x]){
-        if (visited[x]==0){
+        if (visited[child]==0){
             parent[child]=x;
             dfs(child, Adj, visited, parent, answer);
         }
